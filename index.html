@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'poppins';
+        }
+
+        .header {}
+
+        .nav {
+            display: flex;
+            border-bottom: 1px solid #ededf0;
+        }
+
+
+        .nav--left {
+            padding-right: 180px;
+        }
+
+        .nav--left>ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+
+        }
+
+        .nav--centre {
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+        .nav--centre>ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+
+        }
+
+        .nav--right {
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+        .nav--right>ul {
+            list-style-type: none;
+            margin: 0;
+            padding left: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 57px;
+        }
+
+
+
+        .navuser__account>a {
+            align-items: center;
+            border-right: 1px solid #ededf0;
+            height: 57px;
+            margin-left: 0;
+            display: flex;
+
+            font-size: 11px;
+            padding: 0 20px;
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+            letter-spacing: .1em;
+        }
+
+        .header--bottom {}
+
+        .header--bottom>ul {
+            display: flex;
+        }
+
+        .header--bottom>ul>li {
+            display: flex;
+            min-height: 120px;
+        }
+
+
+        .header--bottom>ul>li>figure {
+            max-height: 90px;
+            margin-inline-start: 15px;
+        }
+
+        .header--bottom>ul>li>figure>img::first-line {
+            margin-bottom: 10px;
+        }
+
+        .header--bottom>ul>li>figure>img {
+            border-radius: 50%;
+        }
+
+
+        .header--bottom>ul>li>figure>figcaption {
+            font-size: 12px;
+            width: 102%;
+            ;
+        }
+
+        .header__logo-image--padding {
+            padding: 0px 75px;
+        }
+
+
+
+
+
+        .navuser__register>a {
+
+            margin-left: 0;
+
+            align-items: center;
+            font-size: 11px;
+            padding: 0 20px;
+            position: relative;
+            font-weight: 600;
+
+
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__login>a {
+
+            margin-left: 0px;
+
+            align-items: center;
+            font-size: 11px;
+            padding: 0 20px 0 20px;
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+
+        }
+
+        .navuser__home>a {
+
+            margin-left: 20px;
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__shop>a {
+            margin-left: 20px;
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser_personalised>a {
+            margin-left: 20px;
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__deals>a {
+            margin-left: 20px;
+
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__reviews>a {
+            margin-left: 20px;
+
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+
+
+        .navuser__personalised>a {
+            margin-left: 20px;
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__hottestitems>a {
+            margin-left: 20px;
+
+
+            align-items: center;
+            font-size: 13px;
+
+            position: relative;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+        }
+
+        .navuser__giftcertificates>a {
+            align-items: center;
+            border: 1px solid #ededf0;
+            height: 57px;
+            margin-left: 0;
+            display: flex;
+
+            font-size: 11px;
+            padding: 0 20px;
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+            letter-spacing: .1em;
+        }
+
+        .navuser__wishlist>a {
+            align-items: center;
+
+            height: 57px;
+            margin-left: 0;
+            display: flex;
+
+            font-size: 11px;
+            padding: 0 20px;
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+            letter-spacing: .1em;
+        }
+
+        .navuser__cart>a {
+            align-items: center;
+            border: 1px solid #ededf0;
+            height: 57px;
+            margin-left: 0;
+            display: flex;
+
+            font-size: 11px;
+            padding: 0 20px;
+            position: relative;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #1e1e1e;
+            z-index: 11;
+            text-decoration: none;
+            letter-spacing: .1em;
+        }
+
+
+
+        .banner {
+            display: flex;
+
+            flex-wrap: wrap;
+            padding-top: 20px;
+
+            min-height: 650px;
+            min-width: 1500px;
+        }
+
+        .banner1 {
+
+            margin-right: 0px;
+            margin-left: 0%;
+            width: 1010px;
+            height: 650px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .banner1>img {
+            width: 1000px;
+            height: 650px;
+        }
+
+        .banner1__imagetext {
+
+            position: absolute;
+            bottom: 100px;
+            left: 10%;
+            top: 200px;
+            border: 1px solid transparent;
+            width: 800px;
+            height: 400px;
+            margin: 20px 20px;
+            color: #ededf0;
+
+        }
+
+
+
+        .banner1__imagetext>h2 {
+            width: 100%;
+            font-size: 72px;
+            margin-bottom: 5px;
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 700;
+            text-transform: capitalize;
+            letter-spacing: 1.5px;
+            line-height: 1;
+        }
+
+        .banner1__imagetext>p {
+            width: 100%;
+            color: #fff;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+
+
+        .sidebanner {
+            width: 480px;
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .banner1__imagetext--btn {
+            color: #fff;
+            border: 2px solid #fff;
+            background: 0 0;
+            text-decoration: none;
+            padding: 9px 25px 8px;
+            font-weight: 700;
+        }
+
+        .banner2 {
+            width: 490px;
+            height: 400px;
+            position: relative;
+        }
+
+        .banner2>img {
+            width: 480px;
+            height: 400px;
+        }
+
+        .banner2__imagetext {
+            position: absolute;
+            bottom: 100px;
+            left: 2%;
+            top: 200px;
+            border: 1px solid transparent;
+            width: 300px;
+            height: 200px;
+            margin: 20px 20px;
+            color: #ededf0;
+            line-height: 1;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 25px #1e1e1e;
+        }
+
+        .banner3 {
+
+            width: 590px;
+            height: 240px;
+        }
+
+        .banner3>img {
+            width: 49.5%;
+            height: inherit;
+
+        }
+
+        .banner4 {
+            width: 240px;
+            height: 200px;
+        }
+
+        .banner4>img {
+            width: inherit;
+            height: inherit;
+
+        }
+
+        .hr-lines::before {
+            content: " ";
+            height: 2px;
+            width: 300px;
+            background: black;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+        }
+
+        .hr-lines {
+            position: relative;
+            /* new lines */
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .hr-lines:after {
+            content: " ";
+            height: 2px;
+            width: 300px;
+            background: black;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+
+        .banneritem1 {
+            width: 370px;
+            height: 450px;
+            padding: 0px 15px 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banneritem1-img {}
+
+        .banneritem1-img>a>img {
+
+            width: 100%;
+            height: auto;
+            transform: scale(1);
+            display: block;
+            transition: all 0.5s;
+
+        }
+
+        .bodybottom--img1 {
+            width: 100%;
+
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bodybottom--img1 img {
+            width: 100%;
+            height: auto;
+            transform: scale(1);
+            display: block;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+
+        .bodybottom--img1 :before,
+        .bodybottom--img1 :after {
+            content: "";
+            top: 5px;
+            bottom: 5px;
+            right: 5px;
+            left: 5px;
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+
+        }
+
+        .bodybottom--img1:hover img {
+            transform: scale(1.05);
+
+
+        }
+
+        .bodybottom--img1 :before {
+            bottom: 5px;
+            left: 5px;
+            border-bottom: 2px solid #fff;
+            border-left: 2px solid #fff;
+        }
+
+        .bodybottom--img1 :after {
+            top: 5px;
+            right: 5px;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+        }
+
+        .bodybottom--img1 :hover:before,
+        .bodybottom--img1 :hover:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .banneritem1:hover img {
+            transform: scale(1.05);
+
+
+        }
+
+        .banneritems {
+            margin-left: 150px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .topsellers__banneritems {
+            margin-left: 150px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .topsellers__banneritem1 {
+            width: 270px;
+            height: 500px;
+            padding: 0px 15px 30px;
+            overflow: hidden;
+        }
+
+        .topsellers__banneritem2 {
+            width: 270px;
+            height: 500px;
+            padding: 0px 15px 30px;
+            overflow: hidden;
+        }
+
+        .topsellers__banneritem3 {
+            width: 270px;
+            height: 500px;
+            padding: 0px 15px 30px;
+            overflow: hidden;
+        }
+
+        .topsellers__banneritem4 {
+            width: 270px;
+            height: 500px;
+            padding: 0px 15px 30px;
+            overflow: hidden;
+        }
+
+        .topseller__text-title {
+            font-size: 14px;
+            font-weight: 550;
+        }
+
+        .collection-btn {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        hr {
+            border-color: #ffffff;
+            opacity: 0.3;
+            border-width: 2px;
+
+        }
+
+        .headline {
+
+            font-size: 18px;
+            margin: 0px 0px 8px;
+            font-weight: 700;
+            color: #4f4f4f;
+        }
+
+        .body-center {
+            margin-left: 160px;
+            margin-top: 50px;
+        }
+
+        .body-center>hr {
+            margin-block-end: 10em;
+            margin-inline-end: 10em;
+        }
+
+        .cstmr__review {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .ratings {
+            padding-right: 0;
+            padding-left: 730px;
+        }
+
+        .rating__checked--orange {
+            color: orange;
+        }
+
+        .topseller--ratings {
+            display: flex;
+            align-content: center;
+            font-size: 13px;
+            font-weight: 400;
+            color: #6a6c77;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .price-section {
+            display: flex;
+            font-size: 13px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .price-section--mrp {
+            color: #6a6c77;
+        }
+
+        .price-section--newprice {
+            padding-left: 5px;
+            color: orange;
+            font-weight: 500;
+        }
+
+        .bodybottom {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .bodybottom--img {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0px 0px
+        }
+
+        .bodybottom__left {
+            width: 40%;
+            padding-right: 10px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bodybottom__right {
+            width: 40%;
+            padding-right: 10px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bodybottom--img--src {}
+
+
+        .bodybottom--img2 {
+            width: 40%;
+            padding-right: 10px;
+            text-align: center;
+
+        }
+
+
+
+
+
+        .bodybottom--img2>img {
+            width: 100%;
+        }
+
+        .shopbtn>button {
+            margin-top: 20px;
+            background-color: #c49a6c;
+            font-size: 13px;
+            letter-spacing: 2px;
+            display: inline-block;
+            padding: 0 37px;
+            height: 42px;
+            line-height: 40px;
+            color: beige;
+            font-weight: 500;
+        }
+
+        .home_contact_row {
+            width: 100%;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .home_contact_boximg {
+            width: 20%;
+        }
+
+        .home_contact_boxtext {
+            width: 60%;
+            border-right: ;
+        }
+
+        .home_contact_boxphone {
+            width: 20%;
+        }
+
+        .instagram-gallery {
+            background-color: #fff6f6;
+            width: 100%;
+            height: 575px;
+            text-align: center;
+        }
+
+        .instagram-gallery-container {
+
+            height: inherit;
+            margin: 0px 178px;
+        }
+
+        .widget-title {
+            position: relative;
+
+            padding: 66px 0 57px;
+        }
+
+        .support {
+            width: inherit;
+            height: 390px;
+            padding-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .support>ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0%;
+
+        }
+
+        .support>ul>li {
+            text-align: center;
+            display: block;
+            width: 25%;
+
+
+        }
+
+        .support>ul>li>img {
+            display: block;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support--data {
+            padding-right: 10px;
+        }
+
+        footer {
+            background-color: #fff6f6;
+            width: 100%;
+            height: 575px;
+            text-align: center;
+        }
+
+        footer input {
+            display: inline-block;
+            width: 100%;
+
+            margin-right: 10px;
+            height: 50px;
+            padding: 0 20px;
+            vertical-align: middle;
+            border: 0;
+            background-color: transparent;
+            letter-spacing: .05em;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        footer .container {
+            width: inherit;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-wrap: wrap;
+            width: inherit;
+        }
+
+        .footer-info-heading {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+            font-weight: 700;
+            line-height: 1.1;
+            border-bottom: 1px solid black;
+            padding-bottom: 20px;
+            padding-left: 0px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .column-item {
+            display: flex;
+            width: 20%;
+            padding-right: 15px;
+            padding-bottom: 35px;
+            padding-left: 15px;
+            text-align: left;
+            flex-direction: column;
+
+        }
+
+        .column-item1 {
+            display: flex;
+            width: 20%;
+            padding-right: 15px;
+            padding-bottom: 35px;
+            padding-left: 15px;
+            text-align: left;
+            flex-direction: column;
+            line-height: 1;
+
+        }
+
+        .column-item1>address {
+            font-style: normal;
+            padding-top: 35px;
+            line-height: 1.05;
+        }
+
+        .footer-column ul {
+            padding: 0pt;
+        }
+
+        .column-item a {
+            text-decoration: none;
+            color: #1e1e1e;
+        }
+
+        .footer-info-list {
+            padding: 0px;
+            list-style-type: none;
+            margin-left: 0px;
+
+        }
+
+        .form-fieldset {
+            display: block;
+            margin: 0 0 2rem;
+            max-width: none;
+            border-color: transparent;
+        }
+
+        input:focus {
+            border-color: transparent;
+        }
+
+        .form {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            max-width: 570px;
+            margin: auto;
+            height: 54px;
+            line-height: 54px;
+            border: 2px solid rgb(11, 7, 7);
+        }
+
+        .column-item1 b {
+            display: inline;
+        }
+
+        .column-item1 img {
+            padding-top: 10px;
+            width: 158px;
+            height: 110px;
+        }
+
+        .social-network {
+            display: inline;
+        }
+
+        .icon {
+            padding: 30px 8px;
+            ;
+        }
+
+        .legit {
+            background-color: #392a1e;
+            margin: 0px 0px 0px;
+            padding: 15px 0px;
+            font-size: 14px;
+            color: #ededf0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav--left">
+                <ul>
+                    <li class="navuser__account">
+                        <a href="account.php">
+                            <span>Account</span>
+                        </a>
+                    </li>
+                    <li class="navuser__login">
+                        <a href="aa.php"><span>Login</span></a>
+
+                    </li>
+                    <li class="navuser__register">
+                        <a href="aa.php"><span>Register</span></a>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div class="nav--centre">
+                <ul>
+                    <li class="navuser__home">
+                        <a href="account.php">
+                            <span>home</span>
+                        </a>
+                    </li>
+                    <li class="navuser__shop">
+                        <a href="aa.php"><span>shop</span></a>
+
+                    </li>
+                    <li class="navuser__hottestitems">
+                        <a href="aa.php"><span>hottest items</span></a>
+
+
+                    </li>
+                    <li class="navuser__personalised">
+                        <a href="aa.php"><span>personalised</span></a>
+
+
+                    </li>
+                    <li class="navuser__deals">
+                        <a href="aa.php"><span>deals</span></a>
+
+
+                    </li>
+                    <li class="navuser__reviews">
+                        <a href="aa.php"><span>reviews</span></a>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div class="nav--right">
+                <ul>
+                    <li class="navuser__giftcertificates">
+                        <a href="aa.php"><span>gift certificates</span></a>
+
+                    </li>
+                    <li class="navuser__wishlist">
+                        <a href="aa.php"><span>wish list</span></a>
+
+                    </li>
+                    <li class="navuser__cart">
+                        <a href="aa.php"><span>cart</span></a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="header--bottom">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>shop by size shop by size </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="teddy2.jpg'.webp" alt="ted image">
+                        <figcaption>shop by color</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>shop by ocassion</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>with custtom tshirts and card</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <img class=" header__logo-image--padding " src="tedmain.webp" alt="ted image">
+
+                </li>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>shop by size</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="teddy2.jpg'.webp" alt="ted image">
+                        <figcaption>shop by color</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>shop by ocassion</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="ted.jpg" alt="ted image">
+                        <figcaption>with custtom tshirts and card</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="banner">
+            <div class="banner1">
+                <img src="banner1.jpg" alt="banner1">
+                <div class="banner1__imagetext">
+
+                    <h2>
+                        Softest, Huggable Gifts
+                    </h2>
+                    <p>TO EXPRESS EVERY FEELING</p>
+                    <a class="banner1__imagetext--btn " href="shop.com">Shop Now</a>
+
+
+                </div>
+            </div>
+            <div class="sidebanner">
+
+
+                <div class="banner2">
+                    <img src="banner2.jpg" alt="banner2">
+                    <div class="banner2__imagetext">
+                        <h2>Teddy With Luxury
+                            Preserved Roses</h2>
+                        <a class="banner1__imagetext--btn " href="shop.com">Shop Now</a>
+                    </div>
+                </div>
+                <div class="banner3">
+
+                    <img src="banner3.jpg" alt="banner3">
+
+                    <img src="banner4.jpg" alt="banner4">
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <h2 class="hr-lines">THE SHOP</h2>
+        <div class="banneritems">
+
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>Personalized</span></h3>
+                    <a class="collection-btn" title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>Personalized</span></h3>
+                    <a class="collection-btn" title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>Personalized</span></h3>
+                    <a class="collection-btn" title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="love-romance.webp" title="love and romance" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>love and romance</span></h3>
+                    <a class="collection-btn" title="love and romance"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="shop by color"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="home-shop-by-color.webp" title="shop by color" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>shop by color</span></h3>
+                    <a class="collection-btn" title="shop by color"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+            <div class="banneritem1">
+
+                <div class="banneritem1-img"> <a title="shop by size"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="shop by size" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h3 class="text-title"><span>shop by size</span></h3>
+                    <a class="collection-btn" title="shop by size"
+                        href="https://www.giantteddy.com/personalized-bears/">
+                        Shop now </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="body-center">
+            <div class="cstmr__review">
+
+                <div class="headline">
+                    <span>
+                        Reviews From Real Customers
+                    </span>
+
+                </div>
+                <div class="ratings">
+                    <i class="fa fa-star rating__checked--orange"></i>
+                    <i class="fa fa-star rating__checked--orange"></i>
+                    <i class="fa fa-star rating__checked--orange"></i>
+                    <i class=" fa fa-star-o rating__checked--orange"></i>
+                    <i class="fa fa-star-o rating__checked--orange"></i>
+                    <span> 616 Reviews</span>
+
+                </div>
+
+            </div>
+
+            <hr>
+        </div>
+        <h2 class="hr-lines">#TOP SELLERS</h2>
+        <div class="topsellers__banneritems">
+
+            <div class="topsellers__banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+                    <div class="topseller--ratings">
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class=" fa fa-star-o rating__checked--orange"></i>
+                        <i class="fa fa-star-o rating__checked--orange"></i>
+                        <span>&ThickSpace;&ThickSpace;&ThickSpace; &ThickSpace;616 Reviews</span>
+
+
+                    </div>
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="topsellers__banneritem3">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="banner1.jpg" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+                    <div class="topseller--ratings">
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class=" fa fa-star-o rating__checked--orange"></i>
+                        <i class="fa fa-star-o rating__checked--orange"></i>
+                        <span>&ThickSpace;&ThickSpace;&ThickSpace; &ThickSpace;616 Reviews</span>
+
+
+                    </div>
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="topsellers__banneritem4">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="top1.jpg" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+                    <div class="topseller--ratings">
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class=" fa fa-star-o rating__checked--orange"></i>
+                        <i class="fa fa-star-o rating__checked--orange"></i>
+                        <span>&ThickSpace;&ThickSpace;&ThickSpace; &ThickSpace;616 Reviews</span>
+
+
+                    </div>
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="topsellers__banneritem2">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+                    <div class="topseller--ratings">
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class="fa fa-star rating__checked--orange"></i>
+                        <i class=" fa fa-star-o rating__checked--orange"></i>
+                        <i class="fa fa-star-o rating__checked--orange"></i>
+                        <span>&ThickSpace;&ThickSpace;&ThickSpace; &ThickSpace;616 Reviews</span>
+
+
+                    </div>
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <h2 class="hr-lines">#TRENDING NOW</h2>
+        <div class="topsellers__banneritems">
+
+            <div class="topsellers__banneritem1">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+
+
+
+                </div>
+                <div class="price-section">
+                    <div class="price-section--mrp">
+                        <span><del>$216</del></span>
+                    </div>
+                    <div class="price-section--newprice">
+                        <h3><span>$180</span></h3>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="topsellers__banneritem3">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="banner1.jpg" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="topsellers__banneritem4">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="top1.jpg" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+
+                    <div class="price-section">
+                        <div class="price-section--mrp">
+                            <span><del>$216</del></span>
+                        </div>
+                        <div class="price-section--newprice">
+                            <h3><span>$180</span></h3>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="topsellers__banneritem2">
+
+                <div class="banneritem1-img"> <a title="Personalized"
+                        href="https://www.giantteddy.com/personalized-bears/">
+
+                        <img src="personalize.webp" title="Personalized" alt="banner1">
+
+
+                    </a>
+                </div>
+                <div class="collection-title">
+                    <h4 class="topseller__text-title"><span>Sunny Cuddles Soft and Huggable Jumbo Mocha Brown
+                            Teddy Bear
+                            72in</span></h4>
+
+
+
+                </div>
+                <div class="price-section">
+                    <div class="price-section--mrp">
+                        <span><del>$216</del></span>
+                    </div>
+                    <div class="price-section--newprice">
+                        <h3><span>$180</span></h3>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="bodybottom">
+
+            <div class="bodybottom__left">
+                <div class="bodybottom--img1">
+                    <img src="big-coll-1.jpg">
+                    <div class="box-content">
+
+                    </div>
+                </div>
+                <h3>A Teddy Bear for Every Occasion</h3>
+                <span>Special people, special occasions… special gifts from Giant Teddy! We have bears for
+                    every
+                    Reason & Season, including teddy bears for prom, weddings, back-to-school, new babies,
+                    get well
+                    and more. One of our huge, soft, cuddly teddy bears will make every moment in life that
+                    much
+                    more special and memorable, and many offer personalized...</span>
+                <div class="shopbtn">
+                    <button>
+                        <b>SHOP THE COLLECTION</b>
+                    </button>
+                </div>
+
+            </div>
+            <div class="bodybottom__right">
+                <div class="bodybottom--img1"><img src="big-coll-2.jpg">
+                    <div class="box-content"></div>
+                </div>
+
+
+                <h3>A Teddy Bear for Every Occasion</h3>
+                <span>Special people, special occasions… special gifts from Giant Teddy! We have bears for
+                    every
+                    Reason & Season, including teddy bears for prom, weddings, back-to-school, new babies,
+                    get
+                    well
+                    and more. One of our huge, soft, cuddly teddy bears will make every moment in life that
+                    much
+                    more special and memorable, and many offer personalized...</span>
+                <div class="shopbtn">
+                    <button>
+                        <b>SHOP THE COLLECTION</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="home_contact_section">
+            <div class="container">
+                <div class="home_contact_row">
+                    <div class="home_contact_boximg"><img
+                            src="https://cdn11.bigcommerce.com/s-tgeo7zzdhj/product_images/uploaded_images/logo.png"
+                            alt="">
+                    </div>
+                    <div class="home_contact_boxtext">
+
+                        <p>When looking for a fun and thoughtful way to spread some cheer and show your
+                            loved
+                            ones you care, a teddy bear gift is a classic choice. With our selection of
+                            life-size stuffed animals, give a bold gift they are sure to love for years to
+                            come!
+                        </p>
+
+
+
+                    </div>
+                    <div class="home_contact_boxphone"><a href="tel:714-855-3418"> <img
+                                src="https://cdn11.bigcommerce.com/s-tgeo7zzdhj/product_images/uploaded_images/phone-icon.jpg"
+                                alt=""> 714-855-3418</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <video width="100%" height="240" autoplay="autoplay" muted="" playsinline="" loop="loop" class="myVideo"
+        poster="https://cdn11.bigcommerce.com/s-dee9d/product_images/video-poster.jpg">
+        <source src="https://store-dee9d.mybigcommerce.com/product_images/bachelorette_banner.mp4" type="video/mp4">
+        <object width="100%" height="240"
+            data="https://store-dee9d.mybigcommerce.com/javascript/tinymce/plugins/media/moxieplayer.swf"
+            type="application/x-shockwave-flash">
+            <param name="src"
+                value="https://store-dee9d.mybigcommerce.com/javascript/tinymce/plugins/media/moxieplayer.swf">
+            <param name="flashvars"
+                value="url=https%3A//store-dee9d.mybigcommerce.com/product_images/bachelorette_banner.mp4&amp;poster=https%3A//cdn11.bigcommerce.com/s-dee9d/product_images/video-poster.jpg">
+            <param name="allowfullscreen" value="true">
+            <param name="allowscriptaccess" value="true">
+        </object>
+    </video>
+    <section class="instagram-gallery">
+        <div class="instagram-gallery-container">
+            <div class="widget-title">
+                <h3><i class="fa fa-instagram"></i><span>#GIANTTEDDY</span></h3>
+                <label class="underText">On Instagram</label>
+                <div class="instagram-des">
+                    <p>Shop the Original Giant Teddy Brand</p>
+                    <p>Get inspired by beautiful gesture of love </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="support">
+
+        <ul>
+            <li><img src="credit-card-1.jpg">
+                <div class="support--data">
+                    <h4>SECURE PAYMENT</h4>
+                    <p>We implement a variety of security measures to maintain the safety of your personal
+                        information
+                        when you place an order!</p>
+                </div>
+            </li>
+            <li><img src="free-shipping-truck.jpg">
+                <div class="support--data">
+                    <h4>FREE SHIPPING</h4>
+                    <p>Ship at no additional cost! ONLY applicable to the 48 US Contiguous States!</p>
+                </div>
+            </li>
+            <li><img src="satisfaction.webp">
+                <div class="support--data">
+                    <h4>SATISFACTION GUARANTEED</h4>
+                    <p>If anything happens to your order, we want to know &amp; want to make it right. You
+                        have our
+                        Paw
+                        of Honor!</p>
+                </div>
+            </li>
+            <li><img src="sunny-carlifonia.webp">
+                <div class="support--data">
+                    <h4>SUNNY CALIFORNIA</h4>
+                    <p>Giant Teddy is in sunny Anaheim, California. We do most of our business online but if
+                        you are
+                        in
+                        the area, Contact Us about stopping by!</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Sign Up for our Newsletter</h3>
+            <div class="desNewsletter">
+                <p>Receive our latest updates.</p>
+            </div>
+            <form class="form" action="/subscribe.php" method="post" id="footerSubcribeFormSubmit">
+                <fieldset class="form-fieldset">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address"
+                        aria-label="Enter your email address">
+                    <button type="submit" class="btn-subcribe" aria-label="Submit Button">
+                    </button>
+
+                </fieldset>
+            </form>
+        </div>
+
+
+        <!-- Begin Footer Columns -->
+        <div class="footer-column">
+            <div class="column-item">
+                <h3 class="footer-info-heading">NAVIGATE</h3>
+                <ul class="footer-info-list">
+                    <li><a href="https://www.giantteddy.com/" class="home" data-uw-rm-brl="false">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://www.giantteddy.com/shop/" data-uw-rm-brl="false">Shop</a>
+                    </li>
+                    <li>
+                        <a href="https://www.giantteddy.com/hottest-items/" data-uw-rm-brl="false">Hottest
+                            Items</a>
+                    </li>
+                    <li>
+                        <a href="https://www.giantteddy.com/personalized-bears/" data-uw-rm-brl="false">Personalized</a>
+                    </li>
+                    <li>
+                        <a href="https://www.giantteddy.com/furrific-deals/" data-uw-rm-brl="false">Deals</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column-item ">
+                <h3 class="footer-info-heading">Contact</h3>
+                <ul class="footer-info-list">
+                    <li><a href="/contact-us/" data-uw-rm-brl="false">Contact Us</a></li>
+                    <li><a href="/faq/" data-uw-rm-brl="false">FAQ</a></li>
+                    <li><a href="https://blog.giantteddy.com" data-uw-rm-brl="false">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="column-item" data-wow-delay="300ms">
+                <h3 class="footer-info-heading">About</h3>
+                <ul class="footer-info-list">
+                    <li><a href="/returns/" data-uw-rm-brl="false">Returns</a></li>
+                    <li><a href="/about-us/" data-uw-rm-brl="false">About Us</a></li>
+                    <li><a href="/wholesale/" data-uw-rm-brl="false">Wholesale</a></li>
+                    <li><a href="/privacy-policy/" data-uw-rm-brl="false">Privacy Policy</a></li>
+                    <li><a href="/sitemap/" data-uw-rm-brl="false">Sitemap</a></li>
+                    <li><a href="/giftcertificates.php" data-uw-rm-brl="false">Gift Certificates</a></li>
+                </ul>
+            </div>
+
+            <div class="column-item1 " data-wow-delay="400ms">
+                <h3 class="footer-info-heading">CONTACT US</h3>
+
+                <address class="footer-info-list">
+
+                    1070 Kraeme Anaheim, <br \> CA 92806<br \>Call us at <b>714-855-3418</b></address>
+                <img src="footer-black.png" alt="footerimg">
+
+
+
+                </ul>
+            </div>
+
+            <div class="column-item " data-wow-delay="500ms">
+
+                <h3 class="footer-info-heading">Stay Connected</h3>
+                <div class="social-network">
+                    <i class="fa fa-facebook-f icon" icon style="font-size:24px"></i><i class="fa fa-instagram icon"
+                        style="font-size:24px"></i><i class="fa fa-twitter icon" style="font-size:24px"></i><i
+                        class="fa fa-pinterest icon" style="font-size:24px"></i>
+                </div>
+            </div>
+
+
+            <!-- End Footer Columns -->
+        </div>
+        </div>
+    </footer>
+    <div class="legit">
+        <span>© 2022 Giant Teddy All Rights Reserved.</span>
+
+    </div>
+</body>
+
+
+</html>
